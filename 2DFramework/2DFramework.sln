@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2013 for Windows Desktop
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Game", "Game\Game.vcxproj", "{4808C110-EE13-4D78-81F1-678B058F4C0F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{87EEF4B2-EF6D-402D-9B8C-321E52CE5EFF} = {87EEF4B2-EF6D-402D-9B8C-321E52CE5EFF}
+		{15BEB5CB-0980-4A90-A55E-E9290D1E13A7} = {15BEB5CB-0980-4A90-A55E-E9290D1E13A7}
+		{D87E9DF6-3F61-4874-B60E-1C8ECEED91C5} = {D87E9DF6-3F61-4874-B60E-1C8ECEED91C5}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GraphicsWorld", "GraphicsWorld\GraphicsWorld.vcxproj", "{D87E9DF6-3F61-4874-B60E-1C8ECEED91C5}"
+	ProjectSection(ProjectDependencies) = postProject
+		{15BEB5CB-0980-4A90-A55E-E9290D1E13A7} = {15BEB5CB-0980-4A90-A55E-E9290D1E13A7}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PhysicsWorld", "PhysicsWorld\PhysicsWorld.vcxproj", "{87EEF4B2-EF6D-402D-9B8C-321E52CE5EFF}"
+	ProjectSection(ProjectDependencies) = postProject
+		{15BEB5CB-0980-4A90-A55E-E9290D1E13A7} = {15BEB5CB-0980-4A90-A55E-E9290D1E13A7}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Utility", "Utility\Utility.vcxproj", "{15BEB5CB-0980-4A90-A55E-E9290D1E13A7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4808C110-EE13-4D78-81F1-678B058F4C0F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4808C110-EE13-4D78-81F1-678B058F4C0F}.Debug|Win32.Build.0 = Debug|Win32
+		{4808C110-EE13-4D78-81F1-678B058F4C0F}.Release|Win32.ActiveCfg = Release|Win32
+		{4808C110-EE13-4D78-81F1-678B058F4C0F}.Release|Win32.Build.0 = Release|Win32
+		{D87E9DF6-3F61-4874-B60E-1C8ECEED91C5}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D87E9DF6-3F61-4874-B60E-1C8ECEED91C5}.Debug|Win32.Build.0 = Debug|Win32
+		{D87E9DF6-3F61-4874-B60E-1C8ECEED91C5}.Release|Win32.ActiveCfg = Release|Win32
+		{D87E9DF6-3F61-4874-B60E-1C8ECEED91C5}.Release|Win32.Build.0 = Release|Win32
+		{87EEF4B2-EF6D-402D-9B8C-321E52CE5EFF}.Debug|Win32.ActiveCfg = Debug|Win32
+		{87EEF4B2-EF6D-402D-9B8C-321E52CE5EFF}.Debug|Win32.Build.0 = Debug|Win32
+		{87EEF4B2-EF6D-402D-9B8C-321E52CE5EFF}.Release|Win32.ActiveCfg = Release|Win32
+		{87EEF4B2-EF6D-402D-9B8C-321E52CE5EFF}.Release|Win32.Build.0 = Release|Win32
+		{15BEB5CB-0980-4A90-A55E-E9290D1E13A7}.Debug|Win32.ActiveCfg = Debug|Win32
+		{15BEB5CB-0980-4A90-A55E-E9290D1E13A7}.Debug|Win32.Build.0 = Debug|Win32
+		{15BEB5CB-0980-4A90-A55E-E9290D1E13A7}.Release|Win32.ActiveCfg = Release|Win32
+		{15BEB5CB-0980-4A90-A55E-E9290D1E13A7}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

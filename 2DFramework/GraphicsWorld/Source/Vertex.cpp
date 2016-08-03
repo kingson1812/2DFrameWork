@@ -1,5 +1,5 @@
-#include <stdafx.h>
 #include <Vertex.h>
+#include <GameUtility.h>
 
 Vertex::Vertex()
 {}

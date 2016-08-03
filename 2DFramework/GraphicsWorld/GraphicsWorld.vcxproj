@@ -49,7 +49,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>$(SolutionDir)\GraphicsWorld\Header;$(SolutionDir)\Utility\Header;$(SolutionDir)\OpenGL30</AdditionalIncludeDirectories>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <PreprocessorDefinitions>WIN32;_DEBUG;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -77,16 +77,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="AppConfig.h" />
+    <ClInclude Include="Header\Model.h" />
     <ClInclude Include="Header\Object.h" />
-    <ClInclude Include="Header\stdafx.h" />
+    <ClInclude Include="Header\Shader.h" />
     <ClInclude Include="Header\Texture.h" />
     <ClInclude Include="Header\Vertex.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Source\Model.cpp" />
     <ClCompile Include="Source\Object.cpp" />
-    <ClCompile Include="Source\stdafx.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
-    </ClCompile>
+    <ClCompile Include="Source\Shader.cpp" />
+    <ClCompile Include="Source\Texture.cpp" />
     <ClCompile Include="Source\Vertex.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -98,6 +100,10 @@
       <LinkLibraryDependencies>false</LinkLibraryDependencies>
       <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Asset\Object.fs" />
+    <None Include="Asset\Object.vs" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

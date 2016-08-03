@@ -48,8 +48,8 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>$(SolutionDir)\OpenGL30;$(SolutionDir)\Utility\Header;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -78,16 +78,13 @@
     <ClInclude Include="Header\GLESUtility.h" />
     <ClInclude Include="Header\MathVectorMatrix.h" />
     <ClInclude Include="Header\PNGLoader.h" />
-    <ClInclude Include="Header\stdafx.h" />
     <ClInclude Include="Header\WindowUtility.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\GLESUtility.cpp" />
     <ClCompile Include="Source\MathVectorMatrix.cpp" />
     <ClCompile Include="Source\PNGLoader.cpp" />
-    <ClCompile Include="Source\stdafx.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
-    </ClCompile>
+    <ClCompile Include="Source\WindowUtility.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

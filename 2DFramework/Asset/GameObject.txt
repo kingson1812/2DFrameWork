@@ -1,0 +1,44 @@
+{
+	"name" : "model",
+	"number" : "1",
+	"info" : 
+	{
+		"id" : "mdl000",
+		"n_vertex" : "4",
+		"vertex" : 
+		[
+			{
+				"pos" : ["-1", "1"],
+				"uv" : ["0","1"]
+			},
+			{
+				"pos" : ["-1","-1"],
+				"uv" : ["0","0"]
+			},
+			{
+				"pos" : ["1","-1"],
+				"uv" : ["1","0"]
+			},
+			{
+				"pos" : ["1","1"],
+				"uv" : ["1","1"]
+			}
+		]
+	}
+}
+
+{
+	"name" : "texture",
+	"number" : "1",
+	"info" : 
+	[
+		{
+			"id" : "tex000",
+			"path" : "$(SolutionDir)/Asset/Texture/Background.png"
+		},
+		{
+			"id" : "tex001",
+			"path" : "$(SolutionDir)/Asset/Texture/Square.png"
+		}
+	]
+}

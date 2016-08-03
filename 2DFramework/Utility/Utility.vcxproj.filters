@@ -27,9 +27,6 @@
     <ClInclude Include="Header\MathVectorMatrix.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Header\stdafx.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Header\PNGLoader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -44,10 +41,10 @@
     <ClCompile Include="Source\MathVectorMatrix.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Source\stdafx.cpp">
+    <ClCompile Include="Source\PNGLoader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Source\PNGLoader.cpp">
+    <ClCompile Include="Source\WindowUtility.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

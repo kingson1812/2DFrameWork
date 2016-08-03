@@ -30,9 +30,17 @@ class Texture
 public:
 	Texture();
 	~Texture();
+	Texture(char* dataPath, GLuint id);
+
 	int m_width, m_height, m_compression;
 	char * m_data;
 	GLuint m_id;
 private:
 	GLuint		m_textureID;
+	void Init(WrapMode, MipMap, MipMapOption);
+	void GenTexture();
+	void BindTexture();
+	bool LoadTexture(char * filePath);
+	void SetWrapMode(WrapMode wm);
+	void SetFilter(bool mag);
 };

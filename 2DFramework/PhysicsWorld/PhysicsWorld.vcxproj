@@ -49,8 +49,9 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>$(SolutionDir)\PhysicsWorld\Header;$(SolutionDir)\Utility\Header;$(SolutionDir)\OpenGL30;</AdditionalIncludeDirectories>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -72,13 +73,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Header\Sprite.h" />
-    <ClInclude Include="Header\stdafx.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\Sprite.cpp" />
-    <ClCompile Include="Source\stdafx.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Utility\Utility.vcxproj">

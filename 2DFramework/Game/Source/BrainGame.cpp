@@ -1,6 +1,40 @@
-#include "BrainGame.h"
-int main(char argv[], int argc)
+#include <BrainGame.h>
+#include <Define.h>
+
+static Game * s_instance = NULL;
+
+Game::Game()
+{}
+
+Game ::~Game()
+{}
+
+static void CreateInstance()
 {
-	printf("hello ! My name is Son Dzai\n%d");
-	getchar();
+	s_instance = new Game();
+}
+
+static void DestroyInstance()
+{
+	SAFE_DEL(s_instance);
+}
+
+static Game * GetInstance()
+{
+	return s_instance;
+}
+
+void Game::Init()
+{
+
+}
+
+void Game::Render()
+{
+
+}
+
+void Game::Update(float deltaTime)
+{
+
 }

@@ -1,4 +1,3 @@
-#include <stdafx.h>
 #include <PNGLoader.h>
 #include <stdio.h>
 

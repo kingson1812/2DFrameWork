@@ -1,6 +1,7 @@
 #include <AppConfig.h>
 #include <GameUtility.h>
 #include <stdio.h>
+#include <BrainGame.h>
 
 //Set window screen info
 int Screen::m_width = 800;
@@ -9,6 +10,7 @@ int Screen::m_height = 600;
 
 int Init(ESFRAME *esFrame)
 {
+	GAME_INSTANCE->CreateInstance();
 	return 0;
 }
 
@@ -42,19 +44,17 @@ void TouchActionMove(ESFRAME *esFrame, int x, int y)
 	printf("moving to %d - %d\n",x,y);
 }
 
+//*To free memories, objects, singletons
 void CleanUp()
 {
-
+	GAME_INSTANCE->DestroyInstance();
 }
 
 int main(char argv[], int argc)
 {
 	ESFRAME esFrame;
-
 	InitFrame(&esFrame);
-
 	CreateFrame(&esFrame, Screen::m_width, Screen::m_height, "Micro Magic Quest", ES_WINDOW_RGB | ES_WINDOW_DEPTH);
-
 	if (Init(&esFrame) != 0)
 		return -1;
 

@@ -1,7 +1,7 @@
 #include <BrainGame.h>
 #include <Define.h>
 
-static Game * s_instance = NULL;
+Game * Game::s_instance = NULL;
 
 Game::Game()
 {}
@@ -9,17 +9,17 @@ Game::Game()
 Game ::~Game()
 {}
 
-static void CreateInstance()
+void Game::CreateInstance()
 {
 	s_instance = new Game();
 }
 
-static void DestroyInstance()
+void Game::DestroyInstance()
 {
 	SAFE_DEL(s_instance);
 }
 
-static Game * GetInstance()
+Game * Game::GetInstance()
 {
 	return s_instance;
 }

@@ -1,6 +1,5 @@
 #include <AppConfig.h>
 #include <GameUtility.h>
-#include <stdio.h>
 #include <BrainGame.h>
 
 //Set window screen info
@@ -12,6 +11,7 @@ int Init(ESFRAME *esFrame)
 {
 	GAME_INSTANCE->CreateInstance();
 	return 0;
+	
 }
 
 void Draw(ESFRAME *esFrame)

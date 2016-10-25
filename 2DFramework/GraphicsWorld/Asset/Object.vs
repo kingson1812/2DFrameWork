@@ -1,17 +1,17 @@
-attribute	vec3				a_posL;
-attribute	vec2				a_uv;
+attribute	vec3				a_posLocal;
+attribute	vec2				a_uvTexture;
 
 uniform	mat4				u_MVP;
-uniform	mat4				u_worldMatrix;
+uniform	mat4				u_wMatrix;
 
-varying	vec2				v_uv;
-varying	vec4				v_posW;
+varying	vec2				v_uvTexture;
+varying	vec4				v_posWorld;
 
 void main()
 {
-	vec4 posL = vec4(a_posL, 1.0);
-	gl_Position = u_MVP * posL;
+	vec4 posLocal = vec4(a_posLocal, 1.0);
+	gl_Position = u_MVP * a_posLocal;
 	
-	v_uv = a_uv;
-	v_posW = u_worldMatrix * posL;
+	v_uvTexture = a_uvTexture;
+	v_posWorld = u_wMatrix * a_posLocal;
 }

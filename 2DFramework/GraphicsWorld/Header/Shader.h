@@ -20,5 +20,4 @@ public:
 	~Shader();
 
 	int InitVariables();
-	int InitShaders(char * vsPath, char * fsPath);
 };

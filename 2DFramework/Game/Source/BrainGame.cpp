@@ -26,12 +26,13 @@ Game * Game::GetInstance()
 
 void Game::Init()
 {
-
+	c = new Object;
+	c->Init();
 }
 
-void Game::Render()
+void Game::Draw()
 {
-
+	c->Draw();
 }
 
 void Game::Update(float deltaTime)

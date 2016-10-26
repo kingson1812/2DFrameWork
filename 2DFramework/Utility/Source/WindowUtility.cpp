@@ -105,8 +105,7 @@ GLboolean _CreateWindow(ESFRAME* esFrame, const char *title)
 
 	wStyle = WS_VISIBLE | WS_POPUP | WS_BORDER | WS_SYSMENU | WS_CAPTION;
 
-	// Adjust the window rectangle so that the client area has
-	// the correct number of pixels
+	// Adjust the window rectangle so that the client area has the correct number of pixels
 	windowRect.left = 0;
 	windowRect.top = 0;
 	windowRect.right = esFrame->m_width;

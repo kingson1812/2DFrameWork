@@ -10,13 +10,17 @@ int Screen::m_height = 600;
 int Init(ESFRAME *esFrame)
 {
 	GAME_INSTANCE->CreateInstance();
+	GAME_INSTANCE->Init();
 	return 0;
-	
 }
 
 void Draw(ESFRAME *esFrame)
 {
+	glClear(GL_COLOR_BUFFER_BIT);
 
+	GAME_INSTANCE->Draw();
+
+	eglSwapBuffers(esFrame->m_eglDisplay, esFrame->m_eglSurface);
 }
 
 void Update(ESFRAME *esFrame, float deltaTime)

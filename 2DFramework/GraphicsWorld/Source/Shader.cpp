@@ -3,7 +3,7 @@
 Shader::Shader()
 {}
 
-Shader::Shader(GLuint id, char * vs, char * fs) :m_Id(id)
+Shader::Shader(GLuint id, const char * &vs, const char * &fs) :m_id(id)
 {
 	strcpy(m_vsPath, vs);
 	strcpy(m_fsPath, fs);
@@ -17,7 +17,7 @@ Shader::Shader(GLuint id, char * vs, char * fs) :m_Id(id)
 int Shader::InitVariables()
 {
 	m_vertexShader = LoadShader(GL_VERTEX_SHADER, m_vsPath);
-
+	
 	if (m_vertexShader == 0)
 		return -1;
 
@@ -28,7 +28,9 @@ int Shader::InitVariables()
 		glDeleteShader(m_vertexShader);
 		return -2;
 	}
+
 	m_program = LoadProgram(m_vertexShader, m_fragmentShader);
+
 	m_posAttribute = glGetAttribLocation(m_program, "a_posLocal");
 	m_uvAttribute = glGetAttribLocation(m_program, "a_uvTexture");
 

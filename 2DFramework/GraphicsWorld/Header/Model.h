@@ -1,17 +1,31 @@
 #pragma once
-#include <GLESUtility.h>
-#include <Vertex.h>
+#include "Vertex.h"
 
 class Model
 {
 public:
 	Model();
+	Model(const char* & filePath,const GLuint &id);
 	~Model();
-	GLuint m_modelID;
+	
+	GLuint m_id;
+	GLuint m_indexCount, m_vertexCount;
+
+
+	void LoadModel();
+	void Init();
+
+	void GenVIBO();
+
+	void BindBuffVIBO();
+	void BuffDataVIBO();
+	void UnBindVIBO();
+
 private:
 	GLuint m_iboID;
 	GLuint m_vboID;
 
-	Vertex* m_vertex;
-	int m_numOfVertex;
+	Vertex* m_vertexArray;
+	unsigned int *m_indexArray;
+	char * m_filePath;
 };

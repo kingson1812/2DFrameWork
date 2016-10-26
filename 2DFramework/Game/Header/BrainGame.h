@@ -1,14 +1,14 @@
 #pragma once
 #include <stdio.h>
-
+#include <Header\Object.h>
 class Game 
 {
 public:
 	Game();
 	~Game();
-
+	Object *c;
 	void Init();
-	void Render();
+	void Draw();
 	void Update(float deltaTime);
 
 	static void CreateInstance();

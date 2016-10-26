@@ -155,7 +155,7 @@ GLuint ESUTILITYAPI LoadShader(GLenum type, char *path)
 		{
 			char* infoLog = new char[infoLen];
 			glGetShaderInfoLog(shader, infoLen, NULL, infoLog);
-#ifdef WIN32
+#if _WIN32_
 			LogMessage("[GLESU]>> Error compiling shader:\n%s\n", infoLog);
 #endif           
 			delete[] infoLog;

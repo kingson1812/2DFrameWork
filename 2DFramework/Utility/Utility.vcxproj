@@ -76,6 +76,7 @@
     <ClInclude Include="Header\Define.h" />
     <ClInclude Include="Header\GameUtility.h" />
     <ClInclude Include="Header\GLESUtility.h" />
+    <ClInclude Include="Header\Log.h" />
     <ClInclude Include="Header\MathVectorMatrix.h" />
     <ClInclude Include="Header\PNGLoader.h" />
     <ClInclude Include="Header\WindowUtility.h" />

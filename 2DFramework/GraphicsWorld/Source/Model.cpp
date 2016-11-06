@@ -22,11 +22,11 @@ void Model::LoadModel()
 	m_vertexCount = 4;
 	m_vertexArray = new Vertex[m_vertexCount];
 
-	//make a model : 256x256 px^2
-	m_vertexArray[0].m_pos = Vector3(-256.0, 256.0, 0.0);
-	m_vertexArray[1].m_pos = Vector3(256.0, 256.0, 0.0);
-	m_vertexArray[2].m_pos = Vector3(256.0, -256.0, 0.0);
-	m_vertexArray[3].m_pos = Vector3(-256.0, -256.0, 0.0);
+	//make a model : 1x1 px^2
+	m_vertexArray[0].m_pos = Vector3(-1.0, 1.0, 0.0);
+	m_vertexArray[1].m_pos = Vector3(1.0, 1.0, 0.0);
+	m_vertexArray[2].m_pos = Vector3(1.0, -1.0, 0.0);
+	m_vertexArray[3].m_pos = Vector3(-1.0, -1.0, 0.0);
 
 	//fully fill texture (stretch)
 	m_vertexArray[0].m_uv = Vector2(0.0, 1.0);

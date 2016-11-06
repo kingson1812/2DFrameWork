@@ -24,6 +24,7 @@ public:
 
 	Model* m_model;
 	Shader* m_shader;
+	Texture* m_textureArray;
 	
 	void Draw();
 	void Update(float deltaTime);

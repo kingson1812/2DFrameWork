@@ -26,7 +26,7 @@ Game * Game::GetInstance()
 
 void Game::Init()
 {
-	c = new Object;
+	c = new Object();
 	c->Init();
 }
 

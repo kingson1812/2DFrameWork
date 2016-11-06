@@ -10,10 +10,9 @@ Shader::Shader(GLuint id, const char * &vs, const char * &fs) :m_id(id)
 	memset(m_uniformArray, -1, MAX_UNIFORM);//Set default value for all of uniforms
 }
 
-//Init shader vars 
-//0 = successful
-//-1 = vs error
-//-2 = fs error
+//return 0 = successful
+//return -1 = vs error
+//return -2 = fs error
 int Shader::InitVariables()
 {
 	m_vertexShader = LoadShader(GL_VERTEX_SHADER, m_vsPath);
@@ -35,7 +34,8 @@ int Shader::InitVariables()
 	m_uvAttribute = glGetAttribLocation(m_program, "a_uvTexture");
 
 	//find uniforms
-	m_uniformArray[0] = glGetUniformLocation(m_program, "u_MVP");
+	//m_uniformArray[0] = glGetUniformLocation(m_program, "u_MVP");
+	m_uniformArray[0] = glGetUniformLocation(m_program, "u_texture2D");
 	return 0;
 }
 

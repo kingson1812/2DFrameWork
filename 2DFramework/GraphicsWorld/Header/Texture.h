@@ -19,28 +19,26 @@ enum WrapMode
 	WM_CLAMP
 };
 
-enum MipMapOption
-{
-	MMO_MAG = 0,
-	MMO_MIN
-};
-
 class Texture
 {
 public:
 	Texture();
 	~Texture();
-	Texture(char* dataPath, GLuint id);
+	Texture(GLuint id, const char* &path);
 
-	int m_width, m_height, m_compression;
-	char * m_data;
-	GLuint m_id;
-private:
-	GLuint		m_textureID;
-	void Init(WrapMode, MipMap, MipMapOption);
+	void Init(WrapMode wm = WM_REPEAT, MipMap mmMin = MM_LINEAR_LINEAR, MipMap mmMag = MM_LINEAR);
 	void GenTexture();
 	void BindTexture();
-	bool LoadTexture(char * filePath);
+	void UnbindTexture();
+
+	void LoadTexture();
 	void SetWrapMode(WrapMode wm);
-	void SetFilter(bool mag);
+	void SetFilter(MipMap min, MipMap mag);
+	void GBLTexture();
+private:
+	int m_width, m_height, m_bpp;
+	unsigned char * m_data;
+	char* m_filePath;
+	GLuint m_id;
+	GLuint		m_textureID;
 };
